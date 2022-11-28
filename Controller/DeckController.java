@@ -1,11 +1,11 @@
 package Controller;
-import Model.Deck;
 
+import Model.Deck;
 import java.util.Hashtable;
 
 public class DeckController extends EntitiesController{
 
-    private Deck model;
+    private final Deck model;
     public DeckController(PlayerController player,
                           Deck model) {
         super(player);

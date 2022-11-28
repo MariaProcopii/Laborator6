@@ -5,12 +5,8 @@ public class Player{
     private static int playerNr = 0;
     private int money;
     private int tip = 0;
-    private boolean decision = false;
+    private boolean decision;
     private boolean winGame;
-
-    public String getMeal() {
-        return meal;
-    }
 
     public void setMeal(String meal) {
         this.meal = meal;

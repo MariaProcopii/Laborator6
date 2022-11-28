@@ -12,8 +12,8 @@ public class Menu{
     private final String[] suppliesList = {"cheese", "pork", "fish", "broccoli",
             "sausage", "mushrooms"};
     private final int[] suppliesListPrice = {5, 15, 20, 2, 10, 8};
-    private Hashtable<String, Integer> foodWithPrice = new Hashtable<>();
-    private Hashtable<String, Integer> suppliesWithPrice = new Hashtable<>();
+    private final Hashtable<String, Integer> foodWithPrice = new Hashtable<>();
+    private final Hashtable<String, Integer> suppliesWithPrice = new Hashtable<>();
 
     public String getFoodFromSL() {
         return foodFromSL;
@@ -37,14 +37,6 @@ public class Menu{
 
     public String[] getSuppliesList() {
         return suppliesList;
-    }
-
-    public int[] getFoodListPrice() {
-        return foodListPrice;
-    }
-
-    public int[] getSuppliesListPrice() {
-        return suppliesListPrice;
     }
 
     public Hashtable<String, Integer> getFoodWithPrice() {

@@ -1,21 +1,19 @@
 package Controller;
+
 import Model.Player;
 import View.*;
 
 public class PlayerController extends HumanController{
-    private Player model;
+    private final Player model;
 
     public PlayerController(Player model,
                             GreetingM greetingView,
                             GoodByeM goodByeView){
+
         super(greetingView, goodByeView);
         this.model = model;
         setMoney(random.nextInt(201));
-        setPlayerNr();
-    }
-
-    public String getMeal() {
-        return model.getMeal();
+        Player.setPlayerNr();
     }
 
     public void setMeal(String meal) {
@@ -48,14 +46,6 @@ public class PlayerController extends HumanController{
 
     public boolean getDecision() {
         return model.getDecision();
-    }
-
-    public static int getPlayerNr() {
-        return Player.getPlayerNr();
-    }
-
-    public static void setPlayerNr() {
-        Player.setPlayerNr();
     }
 
     public void setWinGame(boolean winGame) {

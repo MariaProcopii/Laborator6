@@ -1,29 +1,29 @@
 package Controller;
+
 import java.util.ArrayList;
 import Model.Admin;
-import Model.Player;
 import View.GoodByeM;
 import View.GreetingM;
 
 public class AdminController extends HumanController{
 
-    private Admin model;
-    private PlayerController player;
-    private TableController table;
+    private final Admin model;
+    private final PlayerController player;
+    private final TableController table;
 
     public AdminController(Admin model,
                             GreetingM greetingView,
                             GoodByeM goodByeView,
                            PlayerController player,
                            TableController table,
-                           int nrOfPlayers,
+                           int nrOfPlayer,
                            int nrOfTables){
 
         super(greetingView, goodByeView);
         this.model = model;
         this.player = player;
         this.table = table;
-        setNumber(nrOfPlayers);
+        setNumber(nrOfPlayer);
         setNrOfTables(nrOfTables);
     }
 
@@ -50,23 +50,15 @@ public class AdminController extends HumanController{
         return model.getFree();
     }
 
-    public static void setServicedPlayers() {
-        Admin.setServicedPlayers();
-    }
-
-    public static int getServicedPlayers() {
-        return Admin.getServicedPlayers();
-    }
-
     public int provideTable(ArrayList<PlayerController> customersList){
         if(getFree()){
             customersList.get(table.getNumber()).setOpinion(1);
-            setReputation(1);
-            setServicedPlayers();
+            setReputation(2);
+            Admin.setServicedPlayers();
             return 1;
         }
         else{
-            setReputation((customersList.size() - getNrOfTables()) * (-3));
+            setReputation((customersList.size() - getNrOfTables()) * (-1));
             return 0;
         }
     }

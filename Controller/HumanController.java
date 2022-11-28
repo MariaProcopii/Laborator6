@@ -1,18 +1,19 @@
 package Controller;
+
 import Model.Human;
 import View.GoodByeM;
 import View.GreetingM;
-
 import java.util.Random;
 
 public abstract class HumanController {
-    private Human model = new Human();
+    private final Human model = new Human();
     public Random random = new Random();
 
     protected GreetingM greetingView;
     protected GoodByeM goodByeView;
     public HumanController(GreetingM greetingView,
                            GoodByeM goodByeView){
+
         this.greetingView = greetingView;
         this.goodByeView = goodByeView;
     }
@@ -31,10 +32,6 @@ public abstract class HumanController {
 
     public static void setReputation(int rep) {
         Human.setReputation(rep);
-    }
-
-    public static int getReputation() {
-        return Human.getReputation();
     }
 
     abstract void greeting();

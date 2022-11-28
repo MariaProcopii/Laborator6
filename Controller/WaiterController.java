@@ -1,15 +1,16 @@
 package Controller;
+
 import Model.Waiter;
 import View.GoodByeM;
 import View.GreetingM;
 import View.Order;
 
 public class WaiterController extends HumanController {
-    private Order orderView;
-    private Waiter model;
-    private PlayerController player;
-    private MealController meal;
-    private MenuController menu;
+    private final Order orderView;
+    private final Waiter model;
+    private final PlayerController player;
+    private final MealController meal;
+    private final MenuController menu;
 
     public WaiterController(GreetingM greetingView,
                             GoodByeM goodByeView,

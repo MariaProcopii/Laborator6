@@ -1,12 +1,12 @@
 package Controller;
+
 import Model.Meal;
-import Model.Menu;
 import View.Order;
 
 public class MealController extends EntitiesController {
-    private MenuController menu;
-    private Meal model;
-    private Order orderView;
+    private final MenuController menu;
+    private final Meal model;
+    private final Order orderView;
 
     public MealController(PlayerController player,
                           MenuController menu,

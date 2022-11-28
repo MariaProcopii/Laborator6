@@ -1,6 +1,6 @@
 package Model;
-import java.util.Random;
 
+import java.util.Random;
 
 public class Human {
     private static int reputation = 0;

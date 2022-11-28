@@ -1,9 +1,9 @@
 package Controller;
-import Model.Menu;
+
 import Model.Table;
 
 public class TableController extends EntitiesController{
-    private Table model;
+    private final Table model;
 
     public TableController(PlayerController player,
                            Table model,
@@ -18,8 +18,8 @@ public class TableController extends EntitiesController{
         return model.getNumber();
     }
 
-    public int setNumber(int number){
-        return model.setNumber(number);
+    public void setNumber(int number){
+        model.setNumber(number);
     }
 
     public void qualityCheck() {

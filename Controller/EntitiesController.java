@@ -1,9 +1,11 @@
 package Controller;
+
 import Model.*;
 import View.QualityCheck;
 import java.util.Random;
 
 public abstract class EntitiesController {
+
     protected PlayerController player;
     public Random random = new Random();
     private final Entities model = new Entities();
@@ -25,16 +27,13 @@ public abstract class EntitiesController {
         return model.getEntityType();
     }
 
-    public boolean getAnswer() {
-        return model.getAnswer();
-    }
-
     public void qualityCheck(String type, int qualityIndex){
         if(qualityIndex == 1){
             player.setOpinion(-1);
-            change(type, getAnswer());
+            player.setDecision(random.nextBoolean());
+            change(type, player.getDecision());
             view.qualityView(type, qualityIndex);
-            view.changeView(getAnswer());
+            view.changeView(player.getDecision());
         }
         else if(qualityIndex == 2){
             player.setOpinion(1);

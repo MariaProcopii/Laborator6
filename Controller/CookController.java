@@ -1,6 +1,5 @@
 package Controller;
-import Model.Meal;
-import Model.Table;
+
 import View.*;
 
 public class CookController extends HumanController{
@@ -32,10 +31,7 @@ public class CookController extends HumanController{
         switch (waiter.getPolite()){
             case 3 -> setReputation(1);
             case 2 -> setReputation(-1);
-            case 1 -> {
-                setReputation(-2);
-                Meal.setMealNr();
-            }
+            case 1 -> setReputation(-2);
         }
         goodByeView.cook(waiter.getName(), waiter.getPolite());
     }

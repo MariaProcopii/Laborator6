@@ -4,8 +4,8 @@ import View.GoodByeM;
 import View.GreetingM;
 
 public class BarmanCoontroller extends HumanController {
-    private DeckController deck;
-    private PlayerController player;
+    private final DeckController deck;
+    private final PlayerController player;
 
     public BarmanCoontroller(GreetingM greetingView,
                              GoodByeM goodByeView,

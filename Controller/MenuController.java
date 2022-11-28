@@ -1,11 +1,10 @@
 package Controller;
-import Model.Human;
-import Model.Menu;
 
+import Model.Menu;
 import java.util.Hashtable;
 
 public class MenuController extends EntitiesController {
-    private Menu model;
+    private final Menu model;
     public MenuController(PlayerController player,
                           Menu model) {
         super(player);
@@ -35,15 +34,6 @@ public class MenuController extends EntitiesController {
 
     public String[] getSuppliesList() {
         return model.getSuppliesList();
-    }
-
-
-    public int[] getFoodListPrice() {
-        return model.getFoodListPrice();
-    }
-
-    public int[] getSuppliesListPrice() {
-        return model.getSuppliesListPrice();
     }
 
     public Hashtable<String, Integer> getFoodWithPrice() {
